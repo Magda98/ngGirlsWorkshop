@@ -1,0 +1,51 @@
+.todo-card__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  padding: 24px 56px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  max-width: 100%;
+  gap: 24px;
+}
+
+.todo-card__title {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.todo-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: height 200ms ease-in-out;
+}
+
+.todo-card__task-input {
+  width: 100%;
+}
+
+.enter-animation {
+  animation: slide-fade 200ms ease-in-out;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leave-animation {
+  animation: slide-fade 200ms ease-in-out reverse;
+}
+
+.todo-card__empty-message {
+  font-size: 1.6rem;
+}
